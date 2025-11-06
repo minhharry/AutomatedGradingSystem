@@ -127,8 +127,8 @@ if __name__ == "__main__":
     # OUTPUT_DIRECTORY = "/Users/youruser/Documents/MyPdfOutput"
 
     # Set your directories here:
-    INPUT_DIRECTORY = "bt"  # <--- SET YOUR INPUT FOLDER
-    OUTPUT_DIRECTORY = "output_bt" # <--- SET YOUR OUTPUT FOLDER
+    INPUT_DIRECTORY = "input_folder"  # <--- SET YOUR INPUT FOLDER
+    OUTPUT_DIRECTORY = "output_folder" # <--- SET YOUR OUTPUT FOLDER
 
     # --- END CONFIGURATION ---
 

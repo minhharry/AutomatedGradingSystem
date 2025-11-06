@@ -9,6 +9,5 @@ dependencies = [
     "dotenv>=0.9.9",
     "google-genai>=1.48.0",
     "gradio>=5.49.1",
-    "pandas>=2.3.3",
-    "pygame>=2.6.1",
+    "pandas>=2.3.3"
 ]
