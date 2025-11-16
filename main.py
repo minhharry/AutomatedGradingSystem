@@ -72,7 +72,7 @@ Each object in the array must have the following keys:
 - **"exercise_id"**: A string identifier for the exercise (e.g., "1", "2a", "3"). This should match the numbering in the problem list.
 - **"is_attempted"**: A boolean (true/false). This is 'true' if the student wrote any code or text that attempts to solve this specific exercise, even if the solution is incomplete or wrong. It is 'false' only if the exercise is completely ignored.
 - **"feedback"**: A string containing detailed, constructive feedback but short and concise for this *specific exercise*. Explain what they did well and what they can improve. 
-- **"grade"**: A numerical score based on the following **generous scale**:
+- **"grade"**: A numerical score based on the following scale:
     - **1**: **Correct Concept & Goal Achieved.** The solution is functionally correct or clearly demonstrates a strong, correct grasp of the exercise's main goal. **Prioritize correct core logic over perfect syntax or minor implementation details.** Tiny, insignificant errors or stylistic differences are acceptable.
     - **0.5**: **Partial Understanding or Good Effort.** The student **clearly understood the core concept** or **implemented a significant part of the solution correctly**, even if there are several logic errors, bugs, or missing pieces. **Be generous with this score;** reward valid attempts and partial understanding.
     - **0**: **Significant Error or Not Seen.** The solution is fundamentally wrong (e.g., doesn't address the prompt, shows no logical path to a solution) or it's missing (and "is_attempted" is false).
@@ -95,7 +95,8 @@ Now, please evaluate the following student submission file based on ALL the exer
             config=genai.types.GenerateContentConfig(
                 top_p=0.5,
                 temperature=0.5,
-                response_mime_type="application/json"
+                response_mime_type="application/json",
+                thinking_config=genai.types.ThinkingConfig(thinking_budget=1024)
             )
         )
         
