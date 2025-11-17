@@ -96,7 +96,7 @@ Now, please evaluate the following student submission file based on ALL the exer
                 top_p=0.5,
                 temperature=0.5,
                 response_mime_type="application/json",
-                thinking_config=genai.types.ThinkingConfig(thinking_budget=1024)
+                thinking_config=genai.types.ThinkingConfig(thinking_budget=-1)
             )
         )
         
